@@ -163,7 +163,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  # Roquefort.update_attributes!({stink_level: 3})
   ```
 - Change the color of Teleme to "mauve"
     
