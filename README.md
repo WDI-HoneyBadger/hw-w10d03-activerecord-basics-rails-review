@@ -28,7 +28,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
- Cheese.create({name: "Charolais", color: "white", origin: "French", stink_level: 5})
+  Cheese.create({name: "Charolais", color: "white", origin: "French", stink_level: 5})
   ```
 
 - Hooligan, a yellow American cheese with a stink level of 3
