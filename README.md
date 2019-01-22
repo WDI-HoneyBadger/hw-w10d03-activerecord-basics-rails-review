@@ -67,9 +67,10 @@ cheeses.all
   SELECT name FROM cheeses WHERE origin = 'French';
   ```
 
+  
   ```ruby
-cheeses.where(origin: 'france')
-```
+  Cheese.where({origin: "france"})
+  ```
 - Find all the English cheeses
     
   ```sql
@@ -104,7 +105,7 @@ cheeses.where(origin: 'france')
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where({stink_level: 5})
   ```
 - Find all Irish cheeses with a stink level of 6
     
@@ -113,7 +114,7 @@ cheeses.where(origin: 'france')
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where({stink_level: 5, origin: "Irish"})
   ```
 - Find all cheeses with a stink level of at least 4, but no greater than 8.
     
@@ -122,7 +123,7 @@ cheeses.where(origin: 'france')
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where("stink_level >= 4").or(Pet.where("stink_level <= 8")).pluck(:name)
   ```
 - Find all American and English cheeses.
     
@@ -131,7 +132,7 @@ cheeses.where(origin: 'france')
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where({origin: "American"}).or(Pet.where({origin: "English"})).pluck(:name)
   ```
 - Find all cheeses that are not from France.
     
@@ -140,7 +141,7 @@ cheeses.where(origin: 'france')
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where.not({origin: "French"})
   ```
 
 
