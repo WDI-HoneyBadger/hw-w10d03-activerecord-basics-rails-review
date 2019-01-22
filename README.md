@@ -156,7 +156,8 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where({name: "Roquefort"} 
+  
   ```
 - Change the color of Teleme to "mauve"
     
@@ -174,7 +175,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where({name: "Hooligan"}).destroy
   ```
 - Change the stink level of Stichelton to be 7
     
@@ -192,7 +193,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.create({name: "Monterey", color: "white", origin: "American", stink_level: 0})
   ```
 - Delete Durrus
     
@@ -201,7 +202,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where({name: "Durrus"}).destroy
   ```
 
 ## Part 2: Review Today's Lesson:
@@ -209,45 +210,47 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 
 - In express we built our routes inside of our controller, where do you put routes in a rails app?
   ```
-  # your answer here
+  config/routes.rb 
+
   ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
-  # your answer here
+  lower-case
   ```
 - What kind of files belong in the `assets` directory?
   ```
-  # your answer here
+  JS,CSS
   ```
 - What does the command `rails db:drop` do?
   ```
-  # your answer here
+  drops the database
   ```
 - What does the command `rails c` do?
   ```
-  # your answer here
+  open the console 
   ```
 - What is an ORM?  What does it stand for?
   ```
-  # your answer here
+  Object-relational mapping (ORM, O/RM, and O/R mapping tool) is a programming technique for converting data between incompatible type systems using object-oriented programming languages.
   ```
 - What does a migration file do?
   ```
-  # your answer here
+  it is for tables and columns, changing names, etc
   ```
 - How do you run your migration files?
   ```
-  # your answer here
+  rails db:create
+  rails db:migrate
   ```
 - How do you start a rails server?
   ```
-  # your answer here
+  rails s
   ```
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
   ```
-  # your answer here
+  rails new reasons_why_ghadeer_rules -G --api --database=postgresql
   ```
 - What is an API?
   ```
-  # your answer here
+  (API) or Application Programming Interface, and it is for building applications without views 
   ```
