@@ -156,7 +156,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+ cheeses.where(name: "Roquefort").update_attribute(stink_level: 3)
   ```
 - Change the color of Teleme to "mauve"
     
@@ -165,7 +165,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where(name: "Teleme").update_attribute(color: "mauve")
   ```
 - Delete the Hooligan cheese
     
@@ -174,7 +174,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({name:"Hooligan"}).delete 
   ```
 - Change the stink level of Stichelton to be 7
     
@@ -183,7 +183,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where(name: "Stichelton").update_attribute(stink_level: 7)
   ```
 - Add the cheese "Monterey Jack", an American cheese with a stink level of 0
     
@@ -192,7 +192,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Monterey Jack", color: "white", origin: "American", stink_level: 0})
   ```
 - Delete Durrus
     
@@ -201,7 +201,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({name: "Durrus"}).delete
   ```
 
 ## Part 2: Review Today's Lesson:
