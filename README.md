@@ -209,47 +209,47 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 
 - In express we built our routes inside of our controller, where do you put routes in a rails app?
   ```
-  # Inside config directory
+  Inside config directory
   ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
-  # lower-case and plural
+  lower-case and plural
   ```
 - What kind of files belong in the `assets` directory?
   ```
-  # javascripts and stylesheets
+  javascripts and stylesheets
   ```
 - What does the command `rails db:drop` do?
   ```
-  #  Drops the database, if it exists
+  Drops the database, if it exists
   ```
 - What does the command `rails c` do?
   ```
-  #  opens a console to work within our rails environment
+  opens a console to work within our rails environment
   ```
 - What is an ORM?  What does it stand for?
   ```
-  # An ORM or a Object-relational mapping (tool) is a programming technique for converting data between incompatible type systems using object-oriented programming languages.
+  An ORM or a Object-relational mapping (tool) is a programming technique for converting data between incompatible type systems using object-oriented programming languages.
   ```
 - What does a migration file do?
   ```
-  # Our migrations are where we are going to define what our tables will look like. Through migrations, we'll be able to change up our column names, the datatypes that our table will accept in each column, and we'll be able to add, delete, and rename columns on the fly.
+  Our migrations are where we are going to define what our tables will look like. Through migrations, we'll be able to change up our column names, the datatypes that our table will accept in each column, and we'll be able to add, delete, and rename columns on the fly.
   ```
 - How do you run your migration files?
   ```
-  # rails db:create
-  # rails db:migrate
+  rails db:create
+  rails db:migrate
   ```
 - How do you start a rails server?
   ```
-  # rails s
+  rails s
   ```
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
   ```
-  # rails new reasons_why_ghadeer_rules -G --api --database=postgresql
+  rails new reasons_why_ghadeer_rules -G --api --database=postgresql
   ```
 - What is an API?
   ```
-  # API stands for Application Programming Interface, is a set of routines, protocols, and tools for building software applications. Basically, an API specifies how software components should interact. Additionally, APIs are used when programming graphical user interface (GUI) components.
+API stands for Application Programming Interface, is a set of routines, protocols, and tools for building software applications. Basically, an API specifies how software components should interact. Additionally, APIs are used when programming graphical user interface (GUI) components.
 
   ```
