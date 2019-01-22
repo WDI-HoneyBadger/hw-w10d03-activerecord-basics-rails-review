@@ -114,7 +114,7 @@ cheeses.all
   ```
 
   ```ruby
-  Cheese.where({stink_level: 5, origin: "Irish"})
+  Cheese.where({stink_level: 6, origin: "Irish"})
   ```
 - Find all cheeses with a stink level of at least 4, but no greater than 8.
     
