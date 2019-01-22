@@ -58,7 +58,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-cheese.all
+  cheese.all
 ```
 
 - Find all the French cheeses
@@ -208,45 +208,45 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 
 - In express we built our routes inside of our controller, where do you put routes in a rails app?
   ```
-  config/routes.rb
+     config/routes.rb
 ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
-  singular name with first letter uppercase
+     singular name with first letter uppercase
   ```
 - What kind of files belong in the `assets` directory?
   ```
-  CSS, JavaScript, images, fonts..
+     CSS, JavaScript, images, fonts..
   ```
 - What does the command `rails db:drop` do?
   ```
-  delete database
+      delete database
   ```
 - What does the command `rails c` do?
   ```
-  open console
+     open console
   ```
 - What is an ORM?  What does it stand for?
 ```
-  Object-relational mapping
+     Object-relational mapping
   ```
 - What does a migration file do?
   ```
-  stored in db/migrate  is a change to the database schema
+     stored in db/migrate  is a change to the database schema
   ```
 - How do you run your migration files?
   ```
-  rails db:migrate
+     rails db:migrate
   ```
 - How do you start a rails server?
   ```
-  rails s
+    rails s
 ```
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
   ```
-  rails new reasons_why_ghadeer_rules -G --database=postgresql
+    rails new reasons_why_ghadeer_rules -G --database=postgresql
 ```
 - What is an API?
   ```
-  one page application without views 
+      one page application without views 
   ```
