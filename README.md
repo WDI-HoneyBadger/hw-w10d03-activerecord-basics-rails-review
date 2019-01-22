@@ -19,7 +19,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.create({name:"Roquefort", color:"Yellow", origin:"french cheese", stink_level:5})  
   ```
 
 - Charolais, a white french cheese with a stink level of 5
@@ -28,7 +28,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.create({name:"Charolais", color:'white', origin:'French', stink_level:5}) 
   ```
 
 - Hooligan, a yellow American cheese with a stink level of 3
@@ -37,7 +37,8 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.create({name:'Hooligan', color:'yellow', stink_level:3})
+ 
   ```
 - Teleme, a white american cheese with a stink level of 2
   ```sql
@@ -59,7 +60,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.all
   ```
 
 - Find all the French cheeses
@@ -69,7 +70,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin"french"})
   ```
 - Find all the English cheeses
     
@@ -87,7 +88,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({stink_level:2})
   ```
 - Find all cheeses with a stink level of 10
     
@@ -105,7 +106,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin:"French"}).where({stink_level:5})
   ```
 - Find all Irish cheeses with a stink level of 6
     
@@ -114,7 +115,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin:"Irish"}).where({stink_level:6})
   ```
 - Find all cheeses with a stink level of at least 4, but no greater than 8.
     
@@ -132,7 +133,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin:"Americal"}) 
   ```
 - Find all cheeses that are not from France.
     
@@ -141,7 +142,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheesel.where.not({origin:"french"})
   ```
 
 
