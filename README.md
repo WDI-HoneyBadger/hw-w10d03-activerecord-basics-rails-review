@@ -19,8 +19,8 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
-  ```
+  Cheese.create({ name: "Roquefort", color: "yellow", origin:"French", stink_level:})
+ ```
 
 - Charolais, a white french cheese with a stink level of 5
   ```sql
@@ -28,7 +28,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.create({ name: "Charolais", color: "white", origin: "French", stink_level: 5})
   ```
 
 - Hooligan, a yellow American cheese with a stink level of 3
@@ -37,15 +37,16 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.create({ name: "Hooligan", color: "yellow", origin: "American", stink_level: 3})
   ```
+  
 - Teleme, a white american cheese with a stink level of 2
   ```sql
   INSERT INTO cheeses (name, color, origin, stink_level) VALUES ('Teleme', 'white', 'American', 2);
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.create({ name: "Teleme", color: "white", origin: "American", stink_level: 2})
   ```
 - And then we inserted a few more cheeses, but I think you get the point.  Moving on!
 
@@ -59,7 +60,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.all
   ```
 
 - Find all the French cheeses
@@ -69,7 +70,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  french_cheeses = Cheese.where({origin = "French"})
   ```
 - Find all the English cheeses
     
@@ -78,7 +79,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  english_cheeses = Cheese.where({origin = "English"})
   ```
 - Find all cheeses with a stink level of 2
     
@@ -87,7 +88,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses_sl_2 = Cheese.where({stink_level = 2})
   ```
 - Find all cheeses with a stink level of 10
     
@@ -96,7 +97,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses_sl_10 = Cheese.where({stink_level = 10})
   ```
 - Find all French cheeses with a stink level of 5
     
@@ -201,7 +202,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.
   ```
 
 ## Part 2: Review Today's Lesson:
@@ -209,45 +210,45 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 
 - In express we built our routes inside of our controller, where do you put routes in a rails app?
   ```
-  # your answer here
+ in the config/routes.rb
   ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
-  # your answer here
+  upper-case and singular
   ```
 - What kind of files belong in the `assets` directory?
   ```
-  # your answer here
+  CSS and JS
   ```
 - What does the command `rails db:drop` do?
   ```
-  # your answer here
+  Drops the database, if it exists
   ```
 - What does the command `rails c` do?
   ```
-  # your answer here
+  Opens a console to work within our rails environment
   ```
 - What is an ORM?  What does it stand for?
   ```
-  # your answer here
+  # ORM stands for Object-relational mappin , and it's a tool that allows us to use Ruby to talk to our databse.
   ```
 - What does a migration file do?
   ```
-  # your answer here
+  Define what our tables will look like. Through migrations, we'll be able to change up our column names, the datatypes that our table will accept in each column, and we'll be able to add, delete and rename columns
   ```
 - How do you run your migration files?
   ```
-  # your answer here
+  rails db:migrate
   ```
 - How do you start a rails server?
   ```
-  # your answer here
+  rails s
   ```
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
   ```
-  # your answer here
+  rails new reasons_why_ghadeer_rules -G --api --database=postgresq
   ```
 - What is an API?
   ```
-  # your answer here
+  It's a website without view 
   ```
