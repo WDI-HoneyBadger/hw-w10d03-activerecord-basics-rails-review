@@ -70,7 +70,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  french_cheeses = Cheese.where({origin = "French"})
+  french_cheeses = Cheese.where({origin: "French"})
   ```
 - Find all the English cheeses
     
@@ -79,7 +79,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  english_cheeses = Cheese.where({origin = "English"})
+  english_cheeses = Cheese.where({origin: "English"})
   ```
 - Find all cheeses with a stink level of 2
     
@@ -88,7 +88,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  cheeses_sl_2 = Cheese.where({stink_level = 2})
+  cheeses_sl_2 = Cheese.where({stink_level: 2})
   ```
 - Find all cheeses with a stink level of 10
     
@@ -97,7 +97,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  cheeses_sl_10 = Cheese.where({stink_level = 10})
+  cheeses_sl_10 = Cheese.where({stink_level: 10})
   ```
 - Find all French cheeses with a stink level of 5
     
@@ -106,7 +106,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-cheeses_sl_5 = Cheese.where({stink_level = 5})
+  cheeses_sl_5 = Cheese.where({stink_level: 5})
   ```
 - Find all Irish cheeses with a stink level of 6
     
@@ -115,7 +115,7 @@ cheeses_sl_5 = Cheese.where({stink_level = 5})
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where({origin: "Irish", stink_level: 6})
   ```
 - Find all cheeses with a stink level of at least 4, but no greater than 8.
     
@@ -193,7 +193,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.create({ name: "Monterey Jack", color: "white", origin: "American", stink_level: 0})
   ```
 - Delete Durrus
     
@@ -202,7 +202,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  Cheese.
+  Cheese.where({name: "Durrus"}).destroy
   ```
 
 ## Part 2: Review Today's Lesson:
@@ -210,7 +210,7 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 
 - In express we built our routes inside of our controller, where do you put routes in a rails app?
   ```
- in the config/routes.rb
+  in the config/routes.rb
   ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
@@ -230,7 +230,7 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
   ```
 - What is an ORM?  What does it stand for?
   ```
-  # ORM stands for Object-relational mappin , and it's a tool that allows us to use Ruby to talk to our databse.
+  ORM stands for Object-relational mappin , and it's a tool that allows us to use Ruby to talk to our databse.
   ```
 - What does a migration file do?
   ```
