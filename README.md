@@ -19,7 +19,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
- Cheese.create({name: "Roquefort", color: "yellow", origin: "French", stink_level: 5})
+  Cheese.create({name: "Roquefort", color: "yellow", origin: "French", stink_level: 5})
   ```
 
 - Charolais, a white french cheese with a stink level of 5
@@ -37,7 +37,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
- Cheese.create({name: "Hooligan", color: "yellow", origin: "American", stink_level: 3})
+  Cheese.create({name: "Hooligan", color: "yellow", origin: "American", stink_level: 3})
   ```
 - Teleme, a white american cheese with a stink level of 2
   ```sql
@@ -69,7 +69,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
- Cheese.where({" origin = 'French' "})
+  Cheese.where({" origin = 'French' "})
   ```
 - Find all the English cheeses
     
@@ -123,7 +123,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-Cheese.where("stink_level >= 4 OR stink_level <= 8 ")
+  Cheese.where("stink_level >= 4 OR stink_level <= 8 ")
   ```
 - Find all American and English cheeses.
     
@@ -158,7 +158,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```ruby
   Cheese.where({name: "Roquefort"}).update_all({ stink_level: 3})
   ```
-- Change the color of Teleme to "mauve"
+ Change the color of Teleme to "mauve"
     
   ```sql
   UPDATE cheeses SET color = 'mauve' WHERE name = 'Teleme';
