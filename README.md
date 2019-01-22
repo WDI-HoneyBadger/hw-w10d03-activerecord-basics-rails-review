@@ -191,6 +191,7 @@ The cheese game is changing constantly. Let's update our cheeses.
 
   ```ruby
   #   Cheese.where({name: Stichelton}).update_attribute({stink_level: 7})
+
   ```
 - Add the cheese "Monterey Jack", an American cheese with a stink level of 0
     
