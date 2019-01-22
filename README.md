@@ -20,8 +20,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
  
-  Cheeses.new({ name: "Roquefort", color: "yellow", origin: "French", stink_level: 5})
-  Cheeses.create({ name: "Roquefort", color: "yellow", origin: "French", stink_level: 5})
+  Cheese.new({ name: "Roquefort", color: "yellow", origin: "French", stink_level: 5})
+  Cheese.create({ name: "Roquefort", color: "yellow", origin: "French", stink_level: 5})
   
 
   
@@ -34,7 +34,7 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
-  Cheeses.create({ name: "Charolais", color: "white", origin: "French", stink_level: 5})
+  Cheese.create({ name: "Charolais", color: "white", origin: "French", stink_level: 5})
 
 - Hooligan, a yellow American cheese with a stink level of 3
   ```sql
@@ -222,7 +222,7 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
   ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
-  # your answer here
+  # singular
   ```
 - What kind of files belong in the `assets` directory?
   ```
@@ -257,7 +257,7 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
   ```
   # your answer here
-  ```
+  rails new reasons_why_ghadeer_rules -G --database=postgresql
 - What is an API?
   ```
   # API stands for Application Programming Interface.
