@@ -19,7 +19,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # y
+  cheeses.create({name: "Roquefort", color:"yellow", origin: "french", stink_level:5  } )
   ```
 
 - Charolais, a white french cheese with a stink level of 5
@@ -28,7 +28,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Charolais", color:"white ", origin: "french", stink_level:5  } )
   ```
 
 - Hooligan, a yellow American cheese with a stink level of 3
@@ -37,7 +37,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Hooligan", color:"yellow", origin: "American", stink_level:3 })
   ```
 - Teleme, a white american cheese with a stink level of 2
   ```sql
@@ -45,7 +45,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Teleme", color:"white", origin: "American", stink_level:2 })
   ```
 - And then we inserted a few more cheeses, but I think you get the point.  Moving on!
 
@@ -59,7 +59,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.all
   ```
 
 - Find all the French cheeses
@@ -69,7 +69,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin: "French"})
   ```
 - Find all the English cheeses
     
@@ -78,8 +78,8 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
-  ```
+  cheese.where({origin: "English"})
+  ``` 
 - Find all cheeses with a stink level of 2
     
   ```sql
@@ -87,7 +87,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({stink_level: 2})
   ```
 - Find all cheeses with a stink level of 10
     
@@ -96,7 +96,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({stink_level: 10})
   ```
 - Find all French cheeses with a stink level of 5
     
@@ -105,7 +105,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+ cheese.where({origin:"French" AND stink_level:5})
   ```
 - Find all Irish cheeses with a stink level of 6
     
@@ -114,7 +114,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin:"Irish" AND stink_level:6}).select :id, :name
   ```
 - Find all cheeses with a stink level of at least 4, but no greater than 8.
     
@@ -123,7 +123,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+ cheese.where({stink_level >= 4 OR stink_level <=8 })
   ```
 - Find all American and English cheeses.
     
@@ -132,7 +132,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin:'American' OR origin:'English' })
   ```
 - Find all cheeses that are not from France.
     
@@ -141,7 +141,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where.not({origin:'French'})
   ```
 
 
@@ -156,7 +156,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Roquefort.update_attributes!({stink_level:3})
   ```
 - Change the color of Teleme to "mauve"
     
@@ -165,7 +165,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+ Teleme.update_attributes!({color:'mauve'})
   ```
 - Delete the Hooligan cheese
     
@@ -174,7 +174,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Hooligan.destroy 
   ```
 - Change the stink level of Stichelton to be 7
     
@@ -183,7 +183,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Stichelton.update_attributes!({stink_level:7})
   ```
 - Add the cheese "Monterey Jack", an American cheese with a stink level of 0
     
@@ -192,7 +192,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.create({name:'Monterey Jack', color:'white',origin:'American', stink_level:0})
   ```
 - Delete Durrus
     
@@ -201,7 +201,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Durrus.destory
   ```
 
 ## Part 2: Review Today's Lesson:
@@ -209,11 +209,11 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 
 - In express we built our routes inside of our controller, where do you put routes in a rails app?
   ```
-  # your answer here
+  config/routes.rb
   ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
-  # your answer here
+  lower-case singuler 
   ```
 - What kind of files belong in the `assets` directory?
   ```
