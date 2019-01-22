@@ -57,8 +57,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```sql
   SELECT * FROM cheeses;
   ```
-
-  ```ruby
+```sql
 cheeses.all
 ```
 
