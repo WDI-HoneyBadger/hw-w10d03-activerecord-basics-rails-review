@@ -19,9 +19,9 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  Cheese.create({ name: "Roquefort", color: "yellow", origin:"French", stink_level:})
- ```
-
+  Cheese.create({ name: "Roquefort", color: "yellow", origin:"French", stink_level: 5})
+  ```
+ 
 - Charolais, a white french cheese with a stink level of 5
   ```sql
   INSERT INTO cheeses (name, color, origin, stink_level) VALUES ('Charolais', 'white', 'French', 5);
@@ -106,7 +106,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+cheeses_sl_5 = Cheese.where({stink_level = 5})
   ```
 - Find all Irish cheeses with a stink level of 6
     
