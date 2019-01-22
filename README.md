@@ -19,7 +19,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.create({name:"Roquefort", color:"Yellow", origin:"french cheese", stink_level:5})  
   ```
 
 - Charolais, a white french cheese with a stink level of 5
@@ -28,7 +28,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.create({name:"Charolais", color:'white', origin:'French', stink_level:5}) 
   ```
 
 - Hooligan, a yellow American cheese with a stink level of 3
@@ -37,7 +37,8 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.create({name:'Hooligan', color:'yellow', stink_level:3})
+ 
   ```
 - Teleme, a white american cheese with a stink level of 2
   ```sql
@@ -59,7 +60,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.all
   ```
 
 - Find all the French cheeses
@@ -69,7 +70,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin"french"})
   ```
 - Find all the English cheeses
     
@@ -87,7 +88,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({stink_level:2})
   ```
 - Find all cheeses with a stink level of 10
     
@@ -105,7 +106,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin:"French"}).where({stink_level:5})
   ```
 - Find all Irish cheeses with a stink level of 6
     
@@ -114,7 +115,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin:"Irish"}).where({stink_level:6})
   ```
 - Find all cheeses with a stink level of at least 4, but no greater than 8.
     
@@ -132,7 +133,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheese.where({origin:"Americal"}) 
   ```
 - Find all cheeses that are not from France.
     
@@ -141,7 +142,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheesel.where.not({origin:"french"})
   ```
 
 
@@ -209,11 +210,11 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 
 - In express we built our routes inside of our controller, where do you put routes in a rails app?
   ```
-  # your answer here
+ config 
   ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
-  # your answer here
+model should be singular and lower-case 
   ```
 - What kind of files belong in the `assets` directory?
   ```
@@ -221,15 +222,15 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
   ```
 - What does the command `rails db:drop` do?
   ```
-  # your answer here
+  delete the database 
   ```
 - What does the command `rails c` do?
   ```
-  # your answer here
+  run localhost 3000
   ```
 - What is an ORM?  What does it stand for?
   ```
-  # your answer here
+  ORM: allow us to communicate with our sql database using ruby code. 
   ```
 - What does a migration file do?
   ```
@@ -237,17 +238,18 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
   ```
 - How do you run your migration files?
   ```
-  # your answer here
-  ```
+rails db:migrate
+
+
+```
 - How do you start a rails server?
   ```
-  # your answer here
-  ```
+./script/server start
+```
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
   ```
-  # your answer here
-  ```
+rails new reasons_why_ghadeer_rules3 --api -G --database=postgresql	  ```
 - What is an API?
   ```
-  # your answer here
+  only data, no views. 
   ```
