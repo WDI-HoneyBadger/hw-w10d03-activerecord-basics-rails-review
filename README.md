@@ -104,8 +104,8 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
-  ```
+  Cheese.where("origin:"French" " ).and(Cheese.where("stink_level = 5"))
+```
 - Find all Irish cheeses with a stink level of 6
     
   ```sql
@@ -113,7 +113,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where("origin:"Irish" " ).and(Cheese.where("stink_level = 6")) 
   ```
 - Find all cheeses with a stink level of at least 4, but no greater than 8.
     
@@ -122,7 +122,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where("stink_level >= 4 ").or(Cheese.where("stink_level <= 8"))  
   ```
 - Find all American and English cheeses.
     
@@ -131,7 +131,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where("origin:"American" " ).or(Cheese.where("origin:"English" ")) 
   ```
 - Find all cheeses that are not from France.
     
@@ -140,8 +140,8 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
-  ```
+  Cheese.find( origin: !French)
+```
 
 
 #### Restocking Cheese
