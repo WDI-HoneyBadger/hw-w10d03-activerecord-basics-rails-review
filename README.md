@@ -248,5 +248,5 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
   ```
 - What is an API?
   ```
-  ITS A WEP SITE WITH DATA BUT HAS NO VIEWS or apis have no fiends btw 
+  ITS A WEB SITE WITH DATA BUT HAS NO VIEWS or apis have no fiends btw 
   ```
