@@ -123,7 +123,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  Cheese.where({"stink_level >= 4"}).or(Pet.where("stink_level <= 8")).pluck(:name)
+  Cheese.where("stink_level >= 4").or(Pet.where("stink_level <= 8")).pluck(:name)
   ```
 - Find all American and English cheeses.
     
