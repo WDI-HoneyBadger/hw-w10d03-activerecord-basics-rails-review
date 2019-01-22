@@ -19,7 +19,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  # y
   ```
 
 - Charolais, a white french cheese with a stink level of 5
@@ -217,37 +217,36 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
   ```
 - What kind of files belong in the `assets` directory?
   ```
-  # your answer here
-  ```
+  # it will be aplace  where all of your CSS, JS, and image files belong.  ```
 - What does the command `rails db:drop` do?
   ```
-  # your answer here
+  #  Drops the database, if it exists
   ```
 - What does the command `rails c` do?
   ```
-  # your answer here
+  # opens a console to work within our rails environment
   ```
 - What is an ORM?  What does it stand for?
   ```
-  # your answer here
+  # ORM stand for Object Relational Mapping , its allow us to comunicate with the database
   ```
 - What does a migration file do?
   ```
-  # your answer here
+  # you can add a file to edit the tables inside the database
   ```
 - How do you run your migration files?
   ```
-  # your answer here
+  # rails db:migrate
   ```
 - How do you start a rails server?
   ```
-  # your answer here
+  # rails s
   ```
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
   ```
-  # your answer here
+  # rails new reasons_why_ghadeer_rules -G --api --database=postgresql
   ```
 - What is an API?
   ```
-  # your answer here
+  # Its a website that share only data without views 
   ```
