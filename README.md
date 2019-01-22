@@ -164,8 +164,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
-  ```
+  teleme.update_attributes!({color: "mauve"}) ```
 - Delete the Hooligan cheese
     
   ```sql
@@ -173,16 +172,15 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  hooligan.destroy
   ```
 - Change the stink level of Stichelton to be 7
     
   ```sql
   UPDATE cheeses SET stink_level = 7 WHERE name = 'Stichelton';
   ```
-
-  ```ruby
-  # your active record solution
+```ruby
+  Stichelton.update_attributes!({stink_level: 7})
   ```
 - Add the cheese "Monterey Jack", an American cheese with a stink level of 0
     
@@ -191,7 +189,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  cheeese.cereate({name: " Monterey Jack" , color: "white" , origin: " American" ,stink_level: 0}) ```
   ```
 - Delete Durrus
     
