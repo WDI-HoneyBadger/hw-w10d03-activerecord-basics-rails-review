@@ -250,6 +250,6 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
   ```
 - What is an API?
   ```
-API stands for Application Programming Interface, is a set of routines, protocols, and tools for building software applications. Basically, an API specifies how software components should interact. Additionally, APIs are used when programming graphical user interface (GUI) components.
+  API stands for Application Programming Interface, is a set of routines, protocols, and tools for building software applications. Basically, an API specifies how software components should interact. Additionally, APIs are used when programming graphical user interface (GUI) components.
 
   ```
