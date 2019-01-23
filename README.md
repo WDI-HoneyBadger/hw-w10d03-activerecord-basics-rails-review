@@ -175,7 +175,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  Cheese.where({name: "Hooligan"}).destroy_all
   ```
 - Change the stink level of Stichelton to be 7
     
@@ -184,7 +184,8 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  # your active record solution
+  stichelton = Cheese.where({name: "Stichelton"})
+  stichelton.update_attributes!({stink_level:7})
   ```
 - Add the cheese "Monterey Jack", an American cheese with a stink level of 0
     
@@ -202,7 +203,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```
 
   ```ruby
-  Cheese.where({name: "Durrus"}).destroy
+  Cheese.where({name: "Roquefort"}).destroy_all
   ```
 
 ## Part 2: Review Today's Lesson:
