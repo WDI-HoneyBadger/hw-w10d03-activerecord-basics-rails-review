@@ -20,6 +20,7 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+  cheeses.create({ name: "Roquefort", color: "yellow" origin: " French", stink_level: 5})
   ```
 
 - Charolais, a white french cheese with a stink level of 5
@@ -29,6 +30,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.create({ name: "Charolais", color:" yellow", origin:"French" stink_level: 5})
+
   ```
 
 - Hooligan, a yellow American cheese with a stink level of 3
@@ -38,6 +41,7 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+  cheeses.create({name: "Hooligan", color: "yellow", origin: "American", stink_level: 3})
   ```
 - Teleme, a white american cheese with a stink level of 2
   ```sql
@@ -46,6 +50,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.create({name: "Teleme", color: "white", origin: "American", stink_level: 2})
+
   ```
 - And then we inserted a few more cheeses, but I think you get the point.  Moving on!
 
@@ -60,6 +66,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.all
+
   ```
 
 - Find all the French cheeses
@@ -70,6 +78,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.where({origin: 'French'})
+
   ```
 - Find all the English cheeses
     
@@ -79,6 +89,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    heeses.where({origin: 'English'})
+
   ```
 - Find all cheeses with a stink level of 2
     
@@ -88,6 +100,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.where({stink_level: 2})
+
   ```
 - Find all cheeses with a stink level of 10
     
@@ -97,6 +111,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.where({stink_level: 10})
+
   ```
 - Find all French cheeses with a stink level of 5
     
@@ -106,6 +122,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.where({origin: "French", stink_level: 5})
+
   ```
 - Find all Irish cheeses with a stink level of 6
     
@@ -115,6 +133,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.where({origin: "Irish", stink_level: 6})
+
   ```
 - Find all cheeses with a stink level of at least 4, but no greater than 8.
     
@@ -124,6 +144,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.where("stink_level >=4 || stink_level <= 8")
+
   ```
 - Find all American and English cheeses.
     
@@ -133,6 +155,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.where({origin: "American"}).or(cheeses.where({origin: "English"}))
+
   ```
 - Find all cheeses that are not from France.
     
@@ -142,6 +166,8 @@ For all solutions, pretend that you have a model called `Cheese`.
 
   ```ruby
   # your active record solution
+    cheeses.where.not({origin: "French"})
+
   ```
 
 
@@ -157,6 +183,8 @@ The cheese game is changing constantly. Let's update our cheeses.
 
   ```ruby
   # your active record solution
+ cheeses.where(name: "Roquefort").update_attribute(stink_level: 3)
+
   ```
 - Change the color of Teleme to "mauve"
     
@@ -166,6 +194,8 @@ The cheese game is changing constantly. Let's update our cheeses.
 
   ```ruby
   # your active record solution
+    cheeses.where(name: "Teleme").update_attribute(color: "mauve")
+
   ```
 - Delete the Hooligan cheese
     
@@ -175,6 +205,8 @@ The cheese game is changing constantly. Let's update our cheeses.
 
   ```ruby
   # your active record solution
+    cheeses.where({name:"Hooligan"}).delete 
+
   ```
 - Change the stink level of Stichelton to be 7
     
@@ -184,6 +216,8 @@ The cheese game is changing constantly. Let's update our cheeses.
 
   ```ruby
   # your active record solution
+    cheeses.where(name: "Stichelton").update_attribute(stink_level: 7)
+
   ```
 - Add the cheese "Monterey Jack", an American cheese with a stink level of 0
     
@@ -193,6 +227,8 @@ The cheese game is changing constantly. Let's update our cheeses.
 
   ```ruby
   # your active record solution
+    cheeses.create({name: "Monterey Jack", color: "white", origin: "American", stink_level: 0})
+
   ```
 - Delete Durrus
     
@@ -202,6 +238,8 @@ The cheese game is changing constantly. Let's update our cheeses.
 
   ```ruby
   # your active record solution
+    cheeses.where({name: "Durrus"}).delete
+
   ```
 
 ## Part 2: Review Today's Lesson:
@@ -210,44 +248,61 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 - In express we built our routes inside of our controller, where do you put routes in a rails app?
   ```
   # your answer here
+    I will put it in : config/routes.rb
+
   ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
   # your answer here
+    The models should be upper-case and singular. 
+
   ```
 - What kind of files belong in the `assets` directory?
   ```
   # your answer here
+  It is going to be CSS/JS.
   ```
 - What does the command `rails db:drop` do?
   ```
   # your answer here
+    It will drops the database.
+
   ```
 - What does the command `rails c` do?
   ```
   # your answer here
+    It opens up the rails console.
+
   ```
 - What is an ORM?  What does it stand for?
   ```
   # your answer here
+  It is Object-relational mapping. It does converting data between incompatible type systems using object-oriented programming languages.
   ```
 - What does a migration file do?
   ```
   # your answer here
+  It does migrates two tables.
   ```
 - How do you run your migration files?
   ```
   # your answer here
+    rails db:migrate
+
   ```
 - How do you start a rails server?
   ```
   # your answer here
+  rails s
   ```
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
   ```
   # your answer here
+  It is rails new reasons_why_ghadeer_rules --api -G --database=postgresql
+
   ```
 - What is an API?
   ```
   # your answer here
+  A web site with data but no view.
   ```
