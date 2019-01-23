@@ -19,7 +19,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Roquefort", color: "yellow", origin: "French", stink_level: 5})
   ```
 
 - Charolais, a white french cheese with a stink level of 5
@@ -28,8 +28,9 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Charolais", color: "white", origin: "French", stink_level: 5})
   ```
+   cheeses.create({name: "Charolais", color: "white", origin: "French", stink_level: 5})
 
 - Hooligan, a yellow American cheese with a stink level of 3
   ```sql
@@ -37,7 +38,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Hooligan", color: "yellow", origin: "American", stink_level: 3})
   ```
 - Teleme, a white american cheese with a stink level of 2
   ```sql
@@ -45,8 +46,12 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Teleme", color: "white", origin: "American", stink_level: 2})
   ```
+  
+  cheeses.create({name: "Hooligan", color: "yellow", origin: "American", stink_level: 3})
+  
+  
 - And then we inserted a few more cheeses, but I think you get the point.  Moving on!
 
 #### Choosing Cheese
@@ -59,7 +64,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.all
   ```
 
 - Find all the French cheeses
@@ -69,7 +74,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({origin: 'French'})
   ```
 - Find all the English cheeses
     
