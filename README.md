@@ -19,7 +19,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Roquefort", color: "yellow", origin: "French", stink_level: 5})
   ```
 
 - Charolais, a white french cheese with a stink level of 5
@@ -28,8 +28,9 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Charolais", color: "white", origin: "French", stink_level: 5})
   ```
+   cheeses.create({name: "Charolais", color: "white", origin: "French", stink_level: 5})
 
 - Hooligan, a yellow American cheese with a stink level of 3
   ```sql
@@ -37,7 +38,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Hooligan", color: "yellow", origin: "American", stink_level: 3})
   ```
 - Teleme, a white american cheese with a stink level of 2
   ```sql
@@ -45,8 +46,12 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.create({name: "Teleme", color: "white", origin: "American", stink_level: 2})
   ```
+  
+  cheeses.create({name: "Hooligan", color: "yellow", origin: "American", stink_level: 3})
+  
+  
 - And then we inserted a few more cheeses, but I think you get the point.  Moving on!
 
 #### Choosing Cheese
@@ -57,9 +62,11 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```sql
   SELECT * FROM cheeses;
   ```
+cheeses.all
+
 
   ```ruby
-  # your active record solution
+  cheeses.all
   ```
 
 - Find all the French cheeses
@@ -68,14 +75,17 @@ For all solutions, pretend that you have a model called `Cheese`.
   SELECT name FROM cheeses WHERE origin = 'French';
   ```
 
+cheeses.where({origin: 'French'})
+
   ```ruby
-  # your active record solution
+  cheeses.where({origin: 'French'})
   ```
 - Find all the English cheeses
     
   ```sql
   SELECT name FROM cheeses WHERE origin = 'English';
   ```
+heeses.where({origin: 'English'})
 
   ```ruby
   # your active record solution
@@ -86,6 +96,9 @@ For all solutions, pretend that you have a model called `Cheese`.
   SELECT name FROM cheeses WHERE stink_level = 2;
   ```
 
+cheeses.where({stink_level: 2})
+
+
   ```ruby
   # your active record solution
   ```
@@ -94,7 +107,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```sql
   SELECT name FROM cheeses WHERE stink_level = 10;
   ```
-
+cheeses.where({stink_level: 10})
   ```ruby
   # your active record solution
   ```
@@ -103,6 +116,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```sql
   SELECT name FROM cheeses WHERE origin = 'French' AND stink_level = 5;
   ```
+cheeses.where({origin: "French", stink_level: 5})
 
   ```ruby
   # your active record solution
@@ -112,7 +126,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```sql
   SELECT name FROM cheeses WHERE origin = 'Irish' AND stink_level = 6;
   ```
-
+cheeses.where({origin: "Irish", stink_level: 6})
   ```ruby
   # your active record solution
   ```
@@ -121,6 +135,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```sql
   SELECT name FROM cheeses WHERE stink_level >= 4 OR stink_level <= 8;
   ```
+cheeses.where("stink_level >=4 || stink_level <= 8")
 
   ```ruby
   # your active record solution
@@ -130,6 +145,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```sql
   SELECT name FROM cheeses WHERE origin = 'American' OR origin = 'English';
   ```
+cheeses.where({origin: "American"}).or(cheeses.where({origin: "English"}))
 
   ```ruby
   # your active record solution
@@ -139,7 +155,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```sql
   SELECT * FROM cheeses WHERE origin NOT IN ('French');
   ```
-
+cheeses.where.not({origin: "French"})
   ```ruby
   # your active record solution
   ```
@@ -163,7 +179,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```sql
   UPDATE cheeses SET color = 'mauve' WHERE name = 'Teleme';
   ```
-
+cheeses.where(name: "Teleme").update_attribute(color: "mauve")
   ```ruby
   # your active record solution
   ```
@@ -172,7 +188,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```sql
   DELETE from cheeses WHERE name = 'Hooligan';
   ```
-
+cheeses.where({name:"Hooligan"}).delete 
   ```ruby
   # your active record solution
   ```
@@ -181,7 +197,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```sql
   UPDATE cheeses SET stink_level = 7 WHERE name = 'Stichelton';
   ```
-
+cheeses.where(name: "Stichelton").update_attribute(stink_level: 7)
   ```ruby
   # your active record solution
   ```
@@ -190,7 +206,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```sql
   INSERT INTO cheeses (name, color, origin, stink_level) VALUES ('Monterey Jack', 'white', 'American', 0);
   ```
-
+cheeses.create({name: "Monterey Jack", color: "white", origin: "American", stink_level: 0})
   ```ruby
   # your active record solution
   ```
@@ -199,7 +215,7 @@ The cheese game is changing constantly. Let's update our cheeses.
   ```sql
   DELETE FROM cheeses WHERE name = 'Durrus';
   ```
-
+cheeses.where({name: "Durrus"}).delete
   ```ruby
   # your active record solution
   ```
@@ -211,6 +227,8 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
   ```
   # your answer here
   ```
+  config/routes.rb
+  
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
   # your answer here
@@ -219,35 +237,59 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
   ```
   # your answer here
   ```
+  
+   -CSS 
+   -Javascript 
+   
 - What does the command `rails db:drop` do?
   ```
   # your answer here
   ```
+ Drops the database
+  
 - What does the command `rails c` do?
   ```
   # your answer here
   ```
+  Iit is a console of Ruby that opens a console with rails platform
 - What is an ORM?  What does it stand for?
   ```
   # your answer here
   ```
+  
+ Object Relational Mapping
+ 
 - What does a migration file do?
   ```
   # your answer here
   ```
+  
 - How do you run your migration files?
   ```
   # your answer here
   ```
+  
+  rails db:migrate
+  
 - How do you start a rails server?
   ```
   # your answer here
   ```
+  
+  rails s
+  
+  
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
   ```
   # your answer here
   ```
+  
+  rails new reasons_why_ghadeer_rules --api -G --database=postgresql
+  
+  
 - What is an API?
   ```
   # your answer here
   ```
+  
+  API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other.
