@@ -19,7 +19,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+cheeses.create({name: "Roquefort", color: "yellow", origin: "French", stink_level: 5})
   ```
 
 - Charolais, a white french cheese with a stink level of 5
@@ -28,7 +28,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+cheeses.create({name: "Charolais", color: "white", origin: "French", stink_level: 5})
   ```
 
 - Hooligan, a yellow American cheese with a stink level of 3
@@ -37,7 +37,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+cheeses.create({name: "Hooligan", color: "yellow", origin: "American", stink_level: 3})
   ```
 - Teleme, a white american cheese with a stink level of 2
   ```sql
@@ -45,8 +45,8 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
-  ```
+cheeses.create({name: "Teleme", color: "white", origin: "American", stink_level: 2})
+```
 - And then we inserted a few more cheeses, but I think you get the point.  Moving on!
 
 #### Choosing Cheese
@@ -59,6 +59,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
+  cheeses.all
   # your active record solution
   ```
 
@@ -69,7 +70,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({origin: 'French'})
   ```
 - Find all the English cheeses
     
@@ -78,7 +79,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({origin: 'English'})
   ```
 - Find all cheeses with a stink level of 2
     
@@ -87,7 +88,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({stink_level: 2})
   ```
 - Find all cheeses with a stink level of 10
     
@@ -96,7 +97,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({stink_level: 10})
   ```
 - Find all French cheeses with a stink level of 5
     
@@ -105,7 +106,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({origin: "French", stink_level: 5})
   ```
 - Find all Irish cheeses with a stink level of 6
     
@@ -114,7 +115,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({origin: "Irish", stink_level: 6})
   ```
 - Find all cheeses with a stink level of at least 4, but no greater than 8.
     
@@ -123,7 +124,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where("stink_level >=4 || stink_level <= 8")
   ```
 - Find all American and English cheeses.
     
@@ -132,7 +133,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where({origin: "American"}).or(cheeses.where({origin: "English"}))
   ```
 - Find all cheeses that are not from France.
     
@@ -141,7 +142,7 @@ For all solutions, pretend that you have a model called `Cheese`.
   ```
 
   ```ruby
-  # your active record solution
+  cheeses.where.not({origin: "French"})
   ```
 
 
@@ -209,45 +210,58 @@ Review the `README.md` file from today's lesson [here](https://github.com/WDI-Ho
 
 - In express we built our routes inside of our controller, where do you put routes in a rails app?
   ```
-  # your answer here
+  in config
   ```
 - Should a rails model be lower-case and plural, upper-case and plural, lower-case and singular, or upper-case and singular?
   ```
-  # your answer here
+  upper-case and singular
   ```
 - What kind of files belong in the `assets` directory?
   ```
-  # your answer here
+  css/js
+
+  # JavaScript, stylesheet, images and config
   ```
 - What does the command `rails db:drop` do?
   ```
+  drop database
   # your answer here
   ```
 - What does the command `rails c` do?
   ```
+  open the consule of rails
   # your answer here
   ```
 - What is an ORM?  What does it stand for?
   ```
+  programming technique for converting data between incompatible type systems using object-oriented programming languages.
   # your answer here
   ```
 - What does a migration file do?
   ```
+  for tables and columns changing to update the database
   # your answer here
   ```
 - How do you run your migration files?
   ```
+  rails db:create  for creating the database.
+  rails db:migrate to update the database with new values
   # your answer here
   ```
 - How do you start a rails server?
+rails s
   ```
   # your answer here
   ```
 - What is the command to start a new rails API called "reasons_why_ghadeer_rules"?
+
+rails new reasons_why_ghadeer_rules --api -G --database=postgresql
   ```
+
   # your answer here
   ```
 - What is an API?
+Application Programming Interface
   ```
   # your answer here
   ```
